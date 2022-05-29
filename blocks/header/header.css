@@ -5,7 +5,7 @@
     border-bottom: 1px solid #545454;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 725px) {
     .header {
         max-width: 320px;
         height: 56px;

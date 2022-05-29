@@ -1,0 +1,15 @@
+.profile__subname {
+    margin: 0;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-rendering: optimizeLegibility;
+}
+
+@media screen and (max-width: 725px) {
+    .profile__subname {
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+    }
+}
