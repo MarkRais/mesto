@@ -13,10 +13,3 @@
 .card__like:hover {
     opacity: 0.5;
 }
-
-.card__like:active {
-    background-image: url(../../../images/like__active.svg);
-    background-size: cover;
-    background-color: #FFFFFF;
-    opacity: 1;
-}
