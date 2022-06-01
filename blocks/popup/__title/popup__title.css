@@ -4,8 +4,7 @@
     line-height: 29px;
     margin: 34px 64px 54px 36px;
     color: #000000;
-    width: 330px;
-    height: 23px;
+    max-width: 330px;
     text-rendering: optimizeLegibility;
 }
 
