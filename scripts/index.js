@@ -1,27 +1,37 @@
-/* Переменные для открытия/закрытия popup */
-let popupOpen = document.querySelector('.profile__info-button');
-let popupClose = document.querySelector('.popup__button-close');
-let popup = document.querySelector('.popup');
+/* Открыть/Закрыть попап редактирования профиля */
+const popupProfileOpen = document.querySelector('.profile__info-button');
+const popupProfileClose = document.querySelector('.popup__button-close_type_profile');
+const popupProfile = document.querySelector('.popup_type_profile');
 
-/* Открыть popup */
-popupOpen.addEventListener('click', ()=> {
-    popup.classList.add('popup_opened');
+popupProfileOpen.addEventListener('click', ()=> {
+    popupProfile.classList.add('popup_opened');
 });
 
-/*Закрыть popup */
-popupClose.addEventListener('click', ()=> {
-    popup.classList.remove('popup_opened');
+popupProfileClose.addEventListener('click', ()=> {
+    popupProfile.classList.remove('popup_opened');
 });
 
-/* Переменные для редактирования профиля */
-let form = document.querySelector('.popup__form');
-let nameInput = document.querySelector('.popup__input_type_name');
-let subnameInput = document.querySelector('.popup__input_type_subname');
+/* Отрыть/Закрыть попап добавления карточки */
+const popupCardOpen = document.querySelector('.profile__button');
+const popupCardClose = document.querySelector('.popup__button-close_type_card');
+const popupCard = document.querySelector('.popup_type_card');
 
-/* Отправка формы */
+popupCardOpen.addEventListener('click', ()=> {
+    popupCard.classList.add('popup_opened');
+});
+
+popupCardClose.addEventListener('click', ()=> {
+    popupCard.classList.remove('popup_opened');
+});
+
+/* Редактирование профиля */
+const form = document.querySelector('.popup__form_type_profile');
+const nameInput = document.querySelector('.popup__input_type_profile-name');
+const subnameInput = document.querySelector('.popup__input_type_profile-subname');
+
 form.addEventListener('submit', function formSubmitHandler(evt) {
     evt.preventDefault();
     document.querySelector('.profile__name').innerHTML = nameInput.value;
     document.querySelector('.profile__subname').innerHTML = subnameInput.value;
-    popup.classList.remove('popup_opened');
+    popupProfile.classList.remove('popup_opened');
 });
