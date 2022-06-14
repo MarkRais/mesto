@@ -1,15 +1,18 @@
-.card {
+.cards__item {
+    list-style: none;
     border-radius: 10px;
-    overflow: hidden;
     background-color: #FFFFFF;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
 }
 
 @media screen and (max-width: 725px) {
-    .card {
+    .cards__item {
         margin-bottom: 20px;
     }
 
-    .card:last-of-type {
+    .cards__item:last-of-type {
         margin-bottom: 0;
     }
 }

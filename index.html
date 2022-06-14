@@ -24,54 +24,19 @@
     </section>
 
     <section class="cards">
-      <article class="card">
-        <img class="card__image" src="./images/karachaevsk.jpg" alt="Сентинский храм">
-        <div class="card__container">
-          <h2 class="card__title">Карачаевск</h2>
-          <button class="card__like" type="button"></button>
-        </div>
-      </article>
-
-      <article class="card">
-        <img class="card__image" src="./images/elbrus.jpg" alt="Гора Эльбрус">
-        <div class="card__container">
-          <h2 class="card__title">Гора Эльбрус</h2>
-          <button class="card__like" type="button"></button>
-        </div>
-      </article>
-
-      <article class="card">
-        <img class="card__image" src="./images/dombai.jpg" alt="Гора Домбай">
-        <div class="card__container">
-          <h2 class="card__title">Домбай</h2>
-          <button class="card__like" type="button"></button>
-        </div>
-      </article>
-
-      <article class="card">
-        <img class="card__image" src="./images/elbrus.jpg" alt="Гора Эльбрус">
-        <div class="card__container">
-          <h2 class="card__title">Гора Эльбрус</h2>
-          <button class="card__like" type="button"></button>
-        </div>
-      </article>
-
-      <article class="card">
-        <img class="card__image" src="./images/dombai.jpg" alt="Гора Домбай">
-        <div class="card__container">
-          <h2 class="card__title">Домбай</h2>
-          <button class="card__like" type="button"></button>
-        </div>
-      </article>
-
-      <article class="card">
-        <img class="card__image" src="./images/karachaevsk.jpg" alt="Сентинский храм">
-        <div class="card__container">
-          <h2 class="card__title">Карачаевск</h2>
-          <button class="card__like" type="button"></button>
-        </div>
-      </article>
+      <ul class="cards__list"></ul>
     </section>
+
+    <template id="card-template">
+      <li class="cards__item">
+        <img class="card__image" alt="Фотография" src="">
+        <div class="card__container">
+          <h2 class="card__title"></h2>
+          <button class="card__like" type="button"></button>
+        </div>
+        <button class="card__delete"></button>
+      </li>  
+    </template>
   </main>
 
   <footer class="footer">

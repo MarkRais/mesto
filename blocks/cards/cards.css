@@ -2,15 +2,4 @@
     max-width: 880px;
     margin: 0 auto;
     padding-top: 50px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px 17px;
-}
-
-@media screen and (max-width: 725px) {
-    .cards {
-        display: block;
-        max-width: 282px;
-        padding-top: 36px;
-    }
 }
