@@ -1,4 +1,4 @@
-/* Открыть/Закрыть попап редактирования профиля */
+// Открыть/Закрыть попап редактирования профиля
 const popupProfileOpen = document.querySelector('.profile__info-button');
 const popupProfileClose = document.querySelector('.popup__button-close_type_profile');
 const popupProfile = document.querySelector('.popup_type_profile');
@@ -11,7 +11,7 @@ popupProfileClose.addEventListener('click', ()=> {
     popupProfile.classList.remove('popup_opened');
 });
 
-/* Отрыть/Закрыть попап добавления карточки */
+// Отрыть/Закрыть попап добавления карточки
 const popupCardOpen = document.querySelector('.profile__button');
 const popupCardClose = document.querySelector('.popup__button-close_type_card');
 const popupCard = document.querySelector('.popup_type_card');
@@ -24,7 +24,7 @@ popupCardClose.addEventListener('click', ()=> {
     popupCard.classList.remove('popup_opened');
 });
 
-/* Редактирование профиля */
+// Редактирование профиля
 const form = document.querySelector('.popup__form_type_profile');
 const nameInput = document.querySelector('.popup__input_type_profile-name');
 const subnameInput = document.querySelector('.popup__input_type_profile-subname');
@@ -36,7 +36,7 @@ form.addEventListener('submit', function formSubmitHandler(evt) {
     popupProfile.classList.remove('popup_opened');
 });
 
-/* Шесть карточек «из коробки» */
+// Шесть карточек «из коробки»
 const initialCards = [
     {
       name: 'Архыз',
@@ -72,6 +72,9 @@ initialCards.forEach(function (element) {
 
     cardElement.querySelector('.card__title').textContent = element.name;
     cardElement.querySelector('.card__image').src = element.link;
+    cardElement.querySelector('.card__like').addEventListener('click', function (evt) {
+        evt.target.classList.toggle('card__like_active');
+    });
 
     cardsList.append(cardElement);
 });
