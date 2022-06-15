@@ -36,7 +36,7 @@ form.addEventListener('submit', function formSubmitHandler(evt) {
     popupProfile.classList.remove('popup_opened');
 });
 
-// Шесть карточек «из коробки»
+// Массив карточек
 const initialCards = [
     {
       name: 'Архыз',
@@ -64,17 +64,38 @@ const initialCards = [
     }
 ];
 
+// Переменные для добавления карточек при загрузке страницы
 const cardsList = document.querySelector('.cards__list');
 const cardTemplate = document.querySelector('#card-template').content;
+// Переменные для открытия/закрытия попап просмотра фото
+const popupImageOpen = document.querySelector('.popup_type_image-viewing');
+const popupImageClose = document.querySelector('.popup__button-close_type_image');
+const popupImage = document.querySelector('.popup_type_image-viewing');
+// Переменные для наполнения попап просмотра фото содержимым
+const popupImagePhoto = document.querySelector('.popup__image');
+const popupImageText = document.querySelector('.popup__image-title');
 
+// Добавление карточек при загрузке страницы
 initialCards.forEach(function (element) {
     const cardElement = cardTemplate.cloneNode(true);
 
     cardElement.querySelector('.card__title').textContent = element.name;
     cardElement.querySelector('.card__image').src = element.link;
+    // Возможность ставить лайк
     cardElement.querySelector('.card__like').addEventListener('click', function (evt) {
         evt.target.classList.toggle('card__like_active');
     });
+    // Открыть попап просмотра фото
+    cardElement.querySelector('.card__image').addEventListener('click', function () {
+        popupImageOpen.classList.add('popup_opened');
+        popupImagePhoto.src = element.link;
+        popupImageText.textContent = element.name;
+    });
 
     cardsList.append(cardElement);
+});
+
+// Закрыть попап просмотра фото
+popupImageClose.addEventListener('click', () => {
+    popupImage.classList.remove('popup_opened');
 });

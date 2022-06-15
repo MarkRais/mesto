@@ -8,4 +8,7 @@
     visibility: hidden;
     opacity: 0;
     transition: visibility .3s linear, opacity .3s linear;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
