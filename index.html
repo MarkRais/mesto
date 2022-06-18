@@ -26,29 +26,29 @@
     <section class="cards">
       <ul class="cards__list"></ul>
     </section>
-
-    <template id="card-template">
-      <li class="cards__item">
-        <img class="card__image" alt="Фотография" src="#">
-        <div class="card__container">
-          <h2 class="card__title"></h2>
-          <button class="card__like" type="button"></button>
-        </div>
-        <button class="card__delete"></button>
-      </li>  
-    </template>
   </main>
 
   <footer class="footer">
     <p class="footer__copyright">&copy; 2020 Mesto Russia</p>
   </footer>
 
+  <template id="card-template">
+    <li class="cards__item">
+      <img class="card__image" alt="Фотография" src="#">
+      <div class="card__container">
+        <h2 class="card__title"></h2>
+        <button class="card__like" type="button"></button>
+      </div>
+      <button class="card__delete"></button>
+    </li>  
+  </template>
+
   <div class="popup popup_type_profile">
     <div class="popup__container">
       <h2 class="popup__title">Редактировать профиль</h2>
       <form class="popup__form popup__form_type_profile">
-        <input class="popup__input popup__input_type_profile-name" type="text" value="Жак-Ив Кусто">
-        <input class="popup__input popup__input_type_profile-subname" type="text" value="Исследователь океана">
+        <input class="popup__input popup__input_type_profile-name" type="text" placeholder="Имя">
+        <input class="popup__input popup__input_type_profile-subname" type="text" placeholder="О себе">
         <button class="popup__button-save popup__button-save_type_profile" type="submit">Сохранить</button>
       </form>
       <button class="popup__button-close popup__button-close_type_profile" type="button"></button>

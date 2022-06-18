@@ -1,11 +1,5 @@
 .popup__image-container {
     position: relative;
-    height: 75vh;
     max-width: 75vw;
-}
-
-@media screen and (max-width: 725px) {
-    .popup__image-container {
-        height: 300px;
-    }
+    max-height: 75vw;
 }
