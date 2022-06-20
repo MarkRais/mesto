@@ -8,6 +8,7 @@
     border: none;
     margin-right: 20px;
     transition: opacity 0.2s ease;
+    cursor: pointer;
 }
 
 .card__like:hover {

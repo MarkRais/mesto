@@ -13,6 +13,7 @@
     color: #FFFFFF;
     transition: opacity .2s ease;
     text-rendering: optimizeLegibility;
+    cursor: pointer;
 }
 
 .popup__button-save:hover {
